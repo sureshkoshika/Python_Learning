@@ -1,0 +1,290 @@
+#1 receving input and and data type conversion 
+birth_year = int(input('Birth year: '))
+age = 2024-int(birth_year)
+print(age)
+
+)
+
+#2 print birth year
+birth_year = input('Birth year: ')
+print(type(birth_year))
+age = 2024-int(birth_year)
+print(type(age))
+print(age)
+
+#3 weight in kgs
+weight = input('What is your weight in grams? ')
+print(type(weight))
+weight_inkgs = round(int(weight)/1000,2)
+print(type(weight_inkgs))
+print(weight_inkgs)
+
+# 4 strings
+course = "Python's Course for beginners"
+print(course)
+course2 = 'Python Course for "beginners"'
+print(course2)
+
+# strings
+course = "Python's Course for beginners"
+print(course)
+course2 = 'Python Course for "beginners"'
+print(course2)
+course3 = ''' 
+Hi Suresh,
+
+how are you! please find the results attached
+
+regards,
+Suresh
+'''
+print(course3)
+
+course4 = 'Python for beginners'
+print(course4[0:10])
+print(course4[0:]) #all the text is displayed , character length is assumed as end index
+print(course4[:5]) # 0 will be assumed as start index
+print(course4[:]) # 0 will be assumed as start index
+print(course4[-10:-1])
+
+# test
+name='jennifer'
+print(name[1:-1]) # op = ennife
+
+# 5 formatted strings
+# # formatted strings
+#normal way
+first = 'Koshika'
+last = ('Suresh')
+message = first+' ['+last+'] is a coder'
+print(message)
+# formatted strings
+msg = f'{first} [{last}] is a coder'
+print(msg)
+
+
+#6 string methods
+from re import findall
+
+course = 'Python for benginners'
+print(len(course))
+print(course.upper())
+print(course.lower())
+# print course .lower (method)
+
+print(course.find('benginners'))
+print(course.replace('benginners','absolute beginners'))
+# find : this gives the index of the of text passed
+# replace : this gonna replace the text with new one as passed
+# in : provides a boolean value if the statement passes is present or not
+print('python' in course)
+
+course.lower()
+course.upper()
+course.title()
+course,find()
+course.replace()
+'xyp' in course
+
+# 7 arithematic operators
+
+print(10+3)
+print(10-3)
+print(10*3)
+print(10/3)
+print(10//3)
+# how to increment a number
+x=10
+x=x+3 # normal
+x+=3 # augemented or enhance incremental
+x-=3
+print(x)
+
+#8 Operator precedence
+x = (10 + 3) * 2 **3
+print(x)
+# Order of operations
+#exponentiation
+#multiplacation
+#addition or subtraction
+x = (2 + 3) * 10 - 3 #47
+print(x)
+# parenthesis always overrides the order mentioned above
+
+
+
+import math
+#9 math functions
+x=-2.9
+print(round(x))
+print(abs(x))
+
+#math module contains a reusable functions which can be used to perform the mathematical calculations
+
+print(math.ceil(2.9))
+print(math.floor(2.9))
+
+# 10 If statements
+
+is_hot = False # is_hot is  variable
+is_cold = False
+
+if is_hot:
+    print('Its a hot, drink a lot of water')
+    print('yeah')
+elif is_cold: #elif is else if
+    print('Its a cold day')
+    print('wear warm clothes')
+else:
+    print('its a lovely day')
+print('Enjoy your day')
+
+# section test
+price = 1000000
+is_good_credit = False
+if is_good_credit:
+    down_payment = price*0.1
+else:
+    down_payment = price * 0.2
+print(f"down payment: ${down_payment}")
+
+## 11 Logical operators
+
+# if applicant has high income and good credit
+has_high_income = True
+has_good_credit = True
+if has_high_income and has_good_credit:
+    print('1 Eligible for loan')
+
+# if applicant has high income OR good credit
+has_high_income = False
+has_good_credit = False
+if has_high_income or has_good_credit:
+    print(' 2 Eligible for loan')
+
+# AND: both should be true
+# OR: At least one should be true
+# NOT : opposite
+# if applicant has good credit and doesn't have any criminal records
+
+has_good_credit = True
+has_criminal_record = False
+if has_good_credit and not has_good_credit:
+    print('Eligible for loan')
+	
+
+## 12 Comparision operators
+
+# if temp is > 30 then its a hot day
+# otherwise if temp is < 10 then its a cold day
+# otherwise it's neither hot nor cold
+
+# < <= - less than or less than or equal
+# >= > - greater than or greater than or equal
+# == equal , != not equal to
+
+temp = 29
+if temp>30:
+     print("It's a hot day")
+elif temp<10:
+    print("It's a Cold day")
+else:
+    print(" It's neither a hot day nor cold")
+	
+
+# comp Q2
+# Q: if name < 3 char long then 'name must be at least 3 char'
+# otherwise if name > 50 then 'name can be max of 50 char only'
+# Otherwise 'name looks good'
+
+name = input('what is your name? ')
+if len(name) < 3:
+    print('name must be at least 3 char')
+elif len(name) > 50:
+    print('name can be max of 50 char only')
+else:
+    print('name looks good')
+
+
+
+
+# 13 weight convertor program
+Weight = int(input('What is your weight? '))
+units = input('(L)bs or (K)g: ')
+
+if units.lower() == 'l':
+    print(f" You are {Weight*0.45} kgs")
+elif units.lower() == 'k':
+    print(f" You are {Weight // 0.45} pounds")
+
+# 14 While Loops
+i = 1
+while i <=5:
+    print(i)
+    i = i +1
+print("done")
+#14.2
+i = 1
+while i <=5:
+    print('*'*i)
+    i = i +1
+print("done")
+
+C:\Users\kossures\PycharmProjects\PythonProject\hello\.venv\Scripts\python.exe C:\Users\kossures\PycharmProjects\PythonProject\hello\app.py 
+*
+**
+***
+****
+*****
+done
+
+Process finished with exit code 0
+
+#15
+# 15 building a guessing game
+# 15.1 Guessing game
+secret_num = 9
+guess_count = 0
+guess_limit = 3
+while guess_count < guess_limit:
+    guess = int(input('Guess: '))
+    guess_count = guess_count + 1
+    if guess == secret_num:
+        print('You win')
+		
+
+# 16 building a Car game
+# 16.1
+command = ""
+started = False
+while True:
+    command = input('> ').lower()
+    if command == 'start':
+        if started:
+            print('car is already started')
+        else:
+            started = True
+            print('Car started..')
+    elif command == 'stop':
+        if not started:
+            print('car already stopped')
+        else:
+            started = False
+            print('car stopped.')
+    elif command == 'help':
+        print('''
+Start - to start the car
+stop - to stop the car
+quit - to quit the game
+        ''')
+    elif command == 'quit':
+        break
+    else:
+        print('invalid command')
+
+        break
+else:
+    print('Sorry You are failed')
+#16 building car game
+
+## end of day1
